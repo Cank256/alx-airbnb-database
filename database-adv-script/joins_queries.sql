@@ -20,6 +20,8 @@ FROM
     properties
 LEFT JOIN 
     reviews ON properties.id = reviews.property_id;
+ORDER BY 
+    properties.name ASC;
 
 --Using the FULL OUTER JOIN clause
 SELECT 
@@ -31,3 +33,5 @@ FROM
     users
 FULL OUTER JOIN 
     bookings ON users.id = bookings.user_id;
+ORDER BY 
+    reviews.id DESC;
